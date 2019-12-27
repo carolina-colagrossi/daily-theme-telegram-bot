@@ -3,3 +3,6 @@ bin
 
 # Ignore system files
 .DS_Store
+
+# Ignore databasses
+*.db

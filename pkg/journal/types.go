@@ -23,8 +23,8 @@ type GoalStatus int
 
 const (
 	GoalStatusActive GoalStatus = iota
-	GoalStatusPaused GoalStatus
-	GoalStatusDeleted GoalStatus
+	GoalStatusPaused
+	GoalStatusDeleted
 )
 
 // Goal is a goal tracked by a user
@@ -40,7 +40,7 @@ type ResponseValue int
 
 const (
 	ResponseValueYes ResponseValue = iota
-	ResponseValueNo ResponseValue
+	ResponseValueNo
 )
 
 // Response encodes a users response to
