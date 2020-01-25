@@ -15,7 +15,7 @@ type Journal struct {
 // User represents a user
 // account
 type User struct {
-	Id int
+	Id int64
 	Name string
 }
 
