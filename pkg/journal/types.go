@@ -1,8 +1,8 @@
 package journal
 
 import (
-	"time"
 	"database/sql"
+	"time"
 )
 
 // Journal encapsulates a database
@@ -15,7 +15,7 @@ type Journal struct {
 // User represents a user
 // account
 type User struct {
-	Id int
+	Id   int64
 	Name string
 }
 
@@ -29,11 +29,11 @@ const (
 
 // Goal is a goal tracked by a user
 type Goal struct {
-	Id int
-	user int
-	Title string
+	Id      int
+	user    int
+	Title   string
 	Created time.Time
-	Status GoalStatus
+	Status  GoalStatus
 }
 
 type ResponseValue int
@@ -46,8 +46,8 @@ const (
 // Response encodes a users response to
 // a daily goal
 type Response struct {
-	Id int
-	goal int
+	Id      int
+	goal    int
 	Created time.Time
-	Value ResponseValue
+	Value   ResponseValue
 }

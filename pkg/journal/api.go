@@ -12,3 +12,8 @@ func NewJournal(file string) (*Journal, error) {
 	}
 	return &Journal{db}, dbInit(db)
 }
+
+// Adds a new user to the journal
+func (journal *Journal) AddNewUser(user string) (*User, error) {
+	return addUser(journal.db, user)
+}

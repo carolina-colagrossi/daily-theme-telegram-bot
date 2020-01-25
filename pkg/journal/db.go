@@ -30,3 +30,17 @@ func dbInit(db *sql.DB) error {
 	_, err := db.Exec(schema)
 	return err
 }
+
+// Adds a new user to the db
+func addUser(db *sql.DB, userName string) (*User, error) {
+	const insertQuery = `INSERT INTO users (name) VALUES (?)`
+	result, err := db.Exec(insertQuery, userName)
+	if err != nil {
+		return nil, err
+	}
+	id, err := result.LastInsertId()
+	if err != nil {
+		return nil, err
+	}
+	return &User{id, userName}, err
+}
